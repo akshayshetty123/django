@@ -1,0 +1,23 @@
+<html>
+<body bgcolor="pink">
+<h><font color="red"><font size="10">Welcome to akmail</font></font><br>
+<form id="login" method="post" action="/emailsend/" > {% csrf_token %}
+<tr>
+
+<td><p><font size="5" color="blue"> Receiver Email ID   </font></p>  </td>
+<td><input name = "emailid" id="emailid"  type="text"></td><br>
+
+</tr>
+<td><p><font size="5" color="blue"> Composer email  </font></p>  </td><br>
+<textarea cols="50" rows="5" name = "msg">
+contents here please...
+</textarea>
+
+</br>
+<td><input type ="submit"  value = "send"  style="height:40px; width:60px" />
+</form>
+
+
+	
+</body>
+</html>

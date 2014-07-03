@@ -1,0 +1,53 @@
+.event-calendar .day {
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  width: 14.285714285714285%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.event-calendar a:hover {
+    cursor: pointer;
+}
+
+.event-calendar .badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 1;
+  font-weight: normal;
+  background-color: #aaaaaa;
+}
+
+.event-calendar h3 {
+    text-align: center;
+}
+
+.event-calendar .current {
+    border-radius: 4px;
+}
+
+.event-calendar .current:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.event-calendar .past {
+
+}
+
+.event-calendar .future {
+
+}
+
+.event-calendar .active {
+    background-color: #dddddd;
+}
+
+.event-calendar .header {
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 1px #000000 solid;
+    padding: 10px 0;
+}

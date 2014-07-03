@@ -1,0 +1,62 @@
+<html>
+<body>
+
+<div id="container" style="width:1400px">
+
+<div id="header" style="background-color:#0000FF;">
+<h1 style="margin-bottom:0;"><form id="login" method="post" action="/homePage/" > 
+<table border = "0"> 
+<tr>
+<td>Username:</td>
+<td><input name = "username"   type="text"></td>
+
+<td>Password:</td>
+<td><input type="password"  class = "form-control" name="Password"></td>
+
+
+<td position = "right"> </td></h1></div>
+<td position = "right"> </td>
+<td><input type ="submit"  value = "Login"  style="height:20px; width:40px" />
+</tr>
+<div id="content" style="background-color:white;height:200px;width:1000px;float:left;">
+<table>
+<form id = "submit" method="post" action="/submit/" name="Sin-up" onsubmit="return validateForm()" > 
+<tr>
+<td><p><font size="4" color="blue"> Name </font></p> </td>
+<td><input type="text" value="{{firstName}}"placeholder="First Name"class = "form-control" name="firstName" size="19"> 
+<input type="text" value="{{lastName1}}" placeholder="Last Name" class = "form-control" size="19" name="lastName" ></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Email Id  </font></p></td>
+<td><input type="text" value="{{userName}}"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Create a Password  </font></p></td><td><input type="password" placeholder="Create Password"class = "form-control" size="45.5" name="createPassword" ></td></tr>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Confirm Password  </font></p> </td>
+<td><input type="password" class = "form-control" placeholder="Confirm Password" name="confirmPassword" size="45.5"></td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+<p><font size="5" color="blue">Access category   </font></p> </td> 
+</tr>
+
+
+<tr>
+<td></td>
+<td><input type="submit" value="Submit" class="btn btn-default loginprim" >
+<a href="/login_page/" value = "Sign-up" class="btn btn-default loginprim">Login page</a></td>
+</tr>
+</table>
+<br><font color="red">{{msg}}</font>
+</form></div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+Copyright © W3Schools.com</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+
+<title>Login Page</title>
+</head>
+<body>
+
+
+<div id="container" style="width:1400px">
+
+<div id="header" style="background-color:#0000FF;">
+<h1 style="margin-bottom:0;"><form id="login" method="post" action="/homePage/" > {% csrf_token %}
+<td><font size='8'><b>Welcome to facebook</b></font></td>
+<td>Username:</td> <td><input name = "username"   type="text"></td>
+
+<td>Password:</td>
+<td><input type="password"  class = "form-control" name="Password"></td>
+<td><input type ="submit"  value = "Login"  style="height:30px; width:60px" />
+</form></h1></div>
+
+<p><font size="12">Create new account</font></p>
+
+<form id = "submit" method="post" action="/submit/" name="Sin-up"  > {% csrf_token %}
+<table>
+<tr>
+<td><p><font size="4" color="blue"> Name </font></p> </td>
+<td><input type="text" value="firstName"placeholder="First Name"class = "form-control" name="firstName" size="19"> 
+<input type="text" value="lastName1" placeholder="Last Name" class = "form-control" size="19" name="lastName" ></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Email Id  </font></p></td>
+<td><input type="text" value="userName"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Date of Birth  </font></p></td>
+<td><input type="text" value="dd/mm/yyyy"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Country  </font></p></td>
+<td><input type="text" value="Countryname"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> User name  </font></p></td>
+<td><input type="text" value="name@brisa.com"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Create a Password  </font></p></td><td><input type="password" placeholder="Create Password"class = "form-control" size="45.5" name="createPassword" ></td></tr>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Confirm Password  </font></p> </td>
+<td><input type="password" class = "form-control" placeholder="Confirm Password" name="confirmPassword" size="45.5"></td>
+</tr>
+</form>
+<tr>
+<td></td>
+<td><input type="submit" value="Submit" class="btn btn-default loginprim" >
+
+</tr>
+
+</table>
+<td><i><font size="16"><font color="red"><center>"Connecting to WORLD"</font></font></center></i></td>
+<td><i><font size="18"><font color="red"><center>"CHEERS"</font></font></center></i></td>
+<div id="footer" style="background-color:grey;clear:both;text-align:center;">
+"Copyright akshayshetyy.com"</div>
+
+</body>
+</head>
+</html>

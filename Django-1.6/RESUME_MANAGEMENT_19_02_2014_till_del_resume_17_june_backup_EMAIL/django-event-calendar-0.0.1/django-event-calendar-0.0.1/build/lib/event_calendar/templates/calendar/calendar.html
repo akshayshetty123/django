@@ -1,0 +1,37 @@
+{% extends 'base_with_sidebar.html' %}
+
+{% load static %}
+
+{% block css %}
+<link href="{% static 'css/event_calendar.css' %}" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+<script type="text/javascript" src="{% static 'js/event_calendar.js' %}"></script>
+<script id="event-template" type="text/x-handlebars-template">
+  {% verbatim %}
+  <p>{{ title }}</p>
+  {% endverbatim %}
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('.event-calendar').EventCalendar();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="event-calendar panel">
+</div>
+{% endblock %}
+
+{% block sidebar-extra-class %}panel{% endblock %}
+{% block sidebar %}
+<h2 id="event_date"></h2>
+<div id="events">
+
+</div>
+{% endblock %}

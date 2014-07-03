@@ -1,0 +1,2 @@
+django-event-calendar
+=====================

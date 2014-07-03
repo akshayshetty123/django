@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript">
+function validateForm()
+{
+	var x=document.forms["Sin-up"]["firstName"].value;
+	if (x==null || x=="")
+	  {
+	  alert("First name must be filled out");
+	  return false;
+	  }
+	var y=document.forms["Sin-up"]["userName"].value;
+	if (y==null || y=="")
+	  {
+	  alert("email must be filled out");
+	  return false;
+	  }
+	/*var atpos=y.indexOf("@");
+	var dotpos=y.lastIndexOf(".");
+	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+	  {
+	  alert("Not a valid e-mail address");
+	  return false;
+	  }*/
+	var z=document.forms["Sin-up"]["createPassword"].value;
+	if (z==null || z=="")
+	  {
+	  alert("Create Password must be filled out");
+	  return false;
+	  }
+	var yz=document.forms["Sin-up"]["confirmPassword"].value;
+	if (yz !=z )
+	  {
+	  alert("Create Password and Confirm Password must be same");
+	  return false;
+	  }
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<form id = "submit" method="post" action="/submit/" name="Sin-up" onsubmit="return validateForm()" >
+<tr>
+<td>Name </td>
+<td><input type="text" value="{{firstName}}"placeholder="First Name"class = "form-control" name="firstName" size="19"> 
+<input type="text" value="{{lastName}}" placeholder="Last Name" class = "form-control" size="19" name="lastName" ></td>
+</tr>
+<tr>
+<td>Email Id</td>
+<td><input type="text" value="{{userName}}"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td>Create a Password</td><td><input type="password" placeholder="Create Password"class = "form-control" size="45.5" name="createPassword" ></td></tr>
+</tr>
+<tr>
+<td>Confirm Password </td>
+<td><input type="password" class = "form-control" placeholder="Confirm Password" name="confirmPassword" size="45.5"></td>
+<tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Submit" class="btn btn-default loginprim" >
+<a href="/login_page/" value = "Sign-up" class="btn btn-default loginprim">Login page</a></td>
+</tr>
+</table>
+<br><font color="red">{{msg}}</font>
+</form>
+</body>
+</html>

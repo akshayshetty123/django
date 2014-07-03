@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<title>Login Page</title>
+</head>
+<body>
+
+
+<div id="container" style="width:1400px">
+
+<div id="header" style="background-color:#0066CC;">
+<h1 style="margin-bottom:0;"><form id="login" method="post" action="/homePage/" > {% csrf_token %}
+<td><font size='6'><b>Welcome to facebook</b></font></td>
+<td>Username:</td> <td><input name = "username"   type="text"></td>
+
+<td>Password:</td>
+<td><input type="password"  class = "form-control" name="Password"></td>
+
+
+
+<td><input type ="submit"  value = "Login"  style="height:30px; width:60px" />
+<a href="/forget/" value = "Sign-up" class="btn btn-default loginprim"><font size="3"><font color="black">forget password</font></font></a></td>
+</form></h1></div>
+<body bgcolor="pink">
+<p><font size="12">Create new account</font></p>
+
+<form id = "submit" method="post" action="/submit/" name="Sin-up"  > {% csrf_token %}
+<table>
+<tr>
+<td><p><font size="4" color="blue"> Name </font></p> </td>
+<td><input type="text" value="firstName"placeholder="First Name"class = "form-control" name="firstName" size="19"> 
+<input type="text" value="lastName1" placeholder="Last Name" class = "form-control" size="19" name="lastName" ></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Email Id  </font></p></td>
+<td><input type="text" value="name@brisa.com"placeholder="email Id" class = "form-control" name="text" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Date of Birth  </font></p></td>
+
+
+<td>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ <link rel="stylesheet" href="/resources/demos/style.css">
+  
+<script>
+  $(function() 
+  {
+    $( "#datepicke1" ).datepicker();
+  });
+ </script>
+  
+<td><input id="datepicke1"  type="text" value="{{DOJ}}" class = "Function" name="datepicke1"  size="7" style="";"></td>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+</td>
+ 
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Country  </font></p></td>
+<td><input type="text" value="Countryname"placeholder="email Id" class = "form-control" name="country" size="45.5"></td>
+</tr>
+
+<tr>
+<td><p><font size="4" color="blue"> User name  </font></p></td>
+<td><input type="text" value="username"placeholder="email Id" class = "form-control" name="userName" size="45.5"></td>
+</tr>
+<tr>
+<td><p><font size="4" color="blue"> Create a Password  </font></p></td><td><input type="password" placeholder="Create Password"class = "form-control" size="45.5" name="password" ></td></tr>
+</tr>
+<tr>
+<td><b><font size="4" color="blue">Please select the gender</font></b><p>
+<font size="4" color="blue"><input type="radio" name="sex" value="male">Male</font>
+<font size="4" color="blue"><input type="radio" name="sex" value="female">Female</font>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Submit" class="btn btn-default loginprim" >
+
+</tr>
+
+</table>
+<br>
+
+</br>
+<td><i><font size="14"><font color="red"><center>"Connecting to WORLD"</font></font></center></i></td>
+<td><i><font size="14"><font color="red"><center>"CHEERS"</font></font></center></i></td>
+<div id="footer" style="background-color:grey;clear:both;text-align:center;">
+"Copyright akshayshetyy.com"</div>
+
+</body>
+</head>
+</html>

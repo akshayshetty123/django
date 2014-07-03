@@ -1,0 +1,66 @@
+<html>
+<head><b>akshay</b></head>
+<body bgcolor="pink">
+<p><font size='18'>"Welcome to 	Facebook First Page"</font></P>
+<form id="login" method="post" action="/homePage1/" > {% csrf_token %}
+<table border = "0">
+<tr>
+<td position = "right"> </td>
+<br>
+<br><td>Finding name in database:</td>
+<td>Username:</td>
+<td><input name = "username"   type="text"></td></br>
+
+<td><input type ="submit"  value = "Check"  style="height:40px; width:60px" />
+</br>
+
+</tr>
+
+</table>
+
+</form>
+<table border = "1" align="left" bgcolor="#B6B6B4" >
+<tr>
+<th>Name</th>
+</tr>
+{% for result in listOfList %}
+	<form id="listOfSearch{{result}}" method="post" action="/editMyTask/">
+	<tr>
+	<td class="Index">{{result}}</td>
+	
+
+	
+	
+	</tr>
+	</form> 
+{%endfor%}
+<form id="login" method="post" action="/homePage2/" > {% csrf_token %}
+<table border = "0">
+<tr>
+<td position = "right"> </td>
+<br>
+<br><td>Deleting username in database:</td>
+<td>Username:</td>
+<td><input name = "username"   type="text"></td></br>
+
+<td><input type ="submit"  value = "Delete"  style="height:40px; width:60px" />
+</br>
+</table>
+</tr>
+<tr>
+<td></td>
+
+</tr>
+</form>
+<form id="submit" method="post" action="/option/">{% csrf_token %}
+<p><font color="red"><font size='5'>Changing the account password</font></font></p>
+<td>Current Username:</td> <td><input name = "username"   type="text"></td><br>
+<td>Changing Password:</td>
+<td><input type="password"  class = "form-control" name="Password"></td>
+<br>
+<td><input type="submit" value="Change" class="btn btn-default loginprim" >
+</form>
+<a href="/link/" value = "Sign-up" class="btn btn-default loginprim"><font color="red"><font size="10">click this link to send email</font></font></a></td><br>
+<a href="/loginpage/" value = "Sign-up" class="btn btn-default loginprim">Logoutpage</a></td>
+
+</html>
